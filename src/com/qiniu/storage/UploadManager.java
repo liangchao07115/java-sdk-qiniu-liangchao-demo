@@ -105,7 +105,6 @@ public final class UploadManager {
 
     /**
      * 上传数据
-     *
      * @param data     上传的数据
      * @param key      上传数据保存的文件名
      * @param token    上传凭证

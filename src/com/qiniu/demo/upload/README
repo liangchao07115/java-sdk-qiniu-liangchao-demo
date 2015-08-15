@@ -1,0 +1,20 @@
+upload 
+
+上传须知：
+1、通过auth类获取上传的token
+
+2、auth类中重载了许多getUpToken方法，可根据需要选择
+
+3、uploadManager类中的put方法提供了上传，重载的put为上传提供了许多不同的选择
+
+4、上传中用到了bean：MyRet类
+
+ps:
+
+1、ak,sk，用到的空间域名， 配置在 com.qiniu.common 中的Config 类下 ，最好配置成xml文件读取，避免频繁更改
+
+2、查看auth类中getUpToken的方法有助于帮助快速地根据需求做选择
+
+
+
+
