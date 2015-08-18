@@ -25,4 +25,5 @@ public final class Zone {
     public static Zone zone1() {
         return new Zone("http://up-z1.qiniu.com", "http://upload-z1.qiniu.com");
     }
+    
 }

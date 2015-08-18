@@ -138,6 +138,7 @@ public final class UploadManager {
     /**
      * 上传文件
      *
+     *
      * @param filePath 上传的文件路径
      * @param key      上传文件保存的文件名
      * @param token    上传凭证
@@ -188,6 +189,6 @@ public final class UploadManager {
         }
         ResumeUploader uploader = new ResumeUploader(client, token, key, file,
                 params, mime, recorder, recorderKey);
-        return uploader.upload();
+        return uploader.upload();        
     }
 }
