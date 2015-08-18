@@ -16,9 +16,9 @@ public class Upload {
 	 */
 	public Auth auth = Auth.create(Config.ak, Config.sk);
 	
-	/*
+	/**
 	 * UploadManager类实现put方法实现上传。
-	 * */
+	 */
 	public UploadManager uploadManager = new UploadManager();
 
 	public Upload() {
@@ -32,7 +32,7 @@ public class Upload {
 		this.uploadManager = uploadManager;
 	}		
 	
-	/*
+	/**
 	 * 上传文件
 	 * UploadManager的put方法有六种重载
      * @param file     上传的文件对象
@@ -40,8 +40,7 @@ public class Upload {
      * @param key      上传文件保存的文件名，如果token中指定key,要与此处的key保持一致
      * @param params   参考使用：http://developer.qiniu.com/docs/v6/api/overview/up/response/vars.html#xvar，可为null		
      * @param mime     指定文件mimetype
-     * @param checkCrc 是否验证crc32
-     * 
+     * @param checkCrc 是否验证crc32 
      */
 	public Response uploadDo(File file, String token, String key,StringMap params,String mime,boolean checkCrc){		
 		try {
