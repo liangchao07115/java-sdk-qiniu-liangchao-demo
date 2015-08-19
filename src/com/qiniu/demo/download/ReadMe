@@ -1,0 +1,6 @@
+私有资源必须通过临时下载授权凭证(downloadToken)下载：
+[GET] http://<domain>/<key>?e=<deadline>token=<downloadToken>
+
+Java-sdk获取私有资源的链接：
+
+1、auth中privateDownloadUrl获取私有资源的链接

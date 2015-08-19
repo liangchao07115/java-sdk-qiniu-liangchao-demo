@@ -3,16 +3,16 @@ import java.nio.charset.Charset;
 // CHECKSTYLE:OFF
 
 public final class Config {	
-	/*
+	/**
 	 * AccessKey(在portal.qiniu.com 在账号的秘钥菜单下查看和管理ak,sk)
 	 */
 	public static final String ak = "weqUHAv22p8heXoBNmfJXkhpzwzT7P2W2hgZPTjy";
-	/*
+	/**
 	 * SecretKey(在portal.qiniu.com 在账号的秘钥菜单下查看和管理ak,sk)
 	 */
 	public static final String sk = "Bed3hg7jdwZxtPJmnkd0UWDHYThAbia3s9oXY8nl";
 	
-	/*
+	/**
 	 * qiniu-java-sdk-liangchao-demo空间的域名
 	 */
 	public static final String domain = "7xl4w1.com1.z0.glb.clouddn.com";

@@ -11,7 +11,7 @@ import com.qiniu.util.StringMap;
 
 /*文件上传*/
 public class Upload {
-	/*
+	/**
 	 * Auth 类可设置获取token，制定putPolicy
 	 */
 	public Auth auth = Auth.create(Config.ak, Config.sk);
