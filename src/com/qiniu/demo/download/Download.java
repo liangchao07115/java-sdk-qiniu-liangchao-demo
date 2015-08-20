@@ -30,7 +30,6 @@ public class Download {
 	public String privateUrl(String baseUrl, long expires){
 		String provateUrl = auth.privateDownloadUrl(baseUrl, expires);		
 		return provateUrl;
-	}
-	
+	}	
 
 }
