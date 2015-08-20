@@ -73,7 +73,7 @@ public final class Auth {
         });
     }
 
-    private Mac createMac() {
+    public Mac createMac() {
         Mac mac;
         try {
             mac = javax.crypto.Mac.getInstance("HmacSHA1");

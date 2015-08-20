@@ -10,11 +10,12 @@ import com.qiniu.http.Response;
 
 public class UploadTest {
 	private File file = new File("c:" + File.separator + "tt" + File.separator + "README.md");
+	
 	private String bucket = "qiniu-java-sdk-liangchao-demo";
 	
+	Upload upload = new Upload();	
 	@Test
-	public void upload(){
-		Upload upload = new Upload();
+	public void upload(){		
 		/*
 		 *auth.uploadToken有四种重载的方法，参考auth类设置
 		 *@param bucket  空间名
@@ -32,11 +33,13 @@ public class UploadTest {
 		} catch (QiniuException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.response.statusCode);
-		}		
+		}	
+		
 	}	
 
-
-
-
+	@Test//图片处理另存get
+	public void test(){
+		System.out.println(upload.getUrl("7xktma.com1.z0.glb.clouddn.com/00.jpg?imageView2/1/w/100/h/100","nepliang","001"));
+	}
 
 }

@@ -8,6 +8,7 @@ import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
 import com.qiniu.util.StringMap;
+import com.qiniu.util.UrlSafeBase64;
 
 /*文件上传*/
 public class Upload {
@@ -52,6 +53,37 @@ public class Upload {
 			Response re = e.response;
 			return re;
 		}			
+	}	
+	
+	
+	@Test
+    public void testaa(){
+    	String entry = "nepliang:0011";  
+    	
+    	String URLentry = UrlSafeBase64.encodeToString(entry);
+
+    	String NewString = "7xktma.com1.z0.glb.clouddn.com/00.jpg?imageView2/1/w/100/h/100"
+    	+ "|saveas/" + URLentry;    	
+        String sign = UrlSafeBase64.encodeToString(auth.createMac().doFinal(NewString.getBytes()));
+    	
+    	String EncodedSign = sign;
+    	
+    	String FinalURL = NewString + "/sign/"+ Config.ak+":"+EncodedSign;
+    	
+    	System.out.println(FinalURL);    	
+    	
+    }	
+	
+	
+	public String getUrl(String url, String bucket, String key){
+		String entry = bucket + ":" + key;
+		String saveurl = UrlSafeBase64.encodeToString(entry);
+		String newString = url + "|saveas/" +saveurl;
+		
+		String sign = UrlSafeBase64.encodeToString(auth.createMac().doFinal(newString.getBytes()));
+		
+		String finalUrl = newString + "/sign/" + Config.ak + ":" + sign;
+		return finalUrl;
 	}	
 	
 }
