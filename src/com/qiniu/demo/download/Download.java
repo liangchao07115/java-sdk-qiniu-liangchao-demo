@@ -1,6 +1,7 @@
 package com.qiniu.demo.download;
 
 import com.qiniu.common.Config;
+import com.qiniu.demo.util.Date2UnixTimestamp;
 import com.qiniu.util.Auth;
 
 public class Download {
@@ -30,6 +31,24 @@ public class Download {
 	public String privateUrl(String baseUrl, long expires){
 		String provateUrl = auth.privateDownloadUrl(baseUrl, expires);		
 		return provateUrl;
-	}	
+	}		
+	
+	/**
+	 * 指定过期时间
+	 * @param date yyyy/MM/dd hh:mm:ss日期格式
+	 * @param url 私有的url 
+	*/  
+	public String unixTimeStampUrl(String date, String url){
+		
+		long unixTime = Date2UnixTimestamp.DateFomat(date);		
+	    
+	    long current = (System.currentTimeMillis()/1000);	 
+	    
+		long deadline = unixTime-current;		
+		
+		String getUrl = auth.privateDownloadUrl(url, deadline);
+		
+		return getUrl;
+	}
 
 }
