@@ -55,26 +55,7 @@ public class Upload {
 		}			
 	}	
 	
-	
-	@Test
-    public void testaa(){
-    	String entry = "nepliang:0011";  
-    	
-    	String URLentry = UrlSafeBase64.encodeToString(entry);
-
-    	String NewString = "7xktma.com1.z0.glb.clouddn.com/00.jpg?imageView2/1/w/100/h/100"
-    	+ "|saveas/" + URLentry;    	
-        String sign = UrlSafeBase64.encodeToString(auth.createMac().doFinal(NewString.getBytes()));
-    	
-    	String EncodedSign = sign;
-    	
-    	String FinalURL = NewString + "/sign/"+ Config.ak+":"+EncodedSign;
-    	
-    	System.out.println(FinalURL);    	
-    	
-    }	
-	
-	
+	//图片转存
 	public String getUrl(String url, String bucket, String key){
 		String entry = bucket + ":" + key;
 		String saveurl = UrlSafeBase64.encodeToString(entry);

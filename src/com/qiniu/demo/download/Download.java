@@ -8,7 +8,7 @@ public class Download {
 	
 	private Auth auth = Auth.create(Config.ak, Config.sk);
 	
-	 /**
+	/**
      * 下载签名
      *
      * @param baseUrl 待签名文件url，如 http://img.domain.com/u/3.jpg 、
